@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_expression"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_expression" />
+
+    <TextView
+        android:id="@+id/text_clear"
+        style="@style/ActionButtonStyle"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toTopOf="@id/text_seven"
+        app:layout_constraintEnd_toStartOf="@id/text_open"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_result"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/text_open"
+        style="@style/ActionButtonStyle"
+        android:text="@string/open"
+        app:layout_constraintBottom_toTopOf="@id/text_eight"
+        app:layout_constraintEnd_toStartOf="@id/text_close"
+        app:layout_constraintStart_toEndOf="@id/text_clear"
+        app:layout_constraintTop_toBottomOf="@id/text_result" />
+
+    <TextView
+        android:id="@+id/text_close"
+        style="@style/ActionButtonStyle"
+        android:text="@string/close"
+        app:layout_constraintBottom_toTopOf="@id/text_nine"
+        app:layout_constraintEnd_toStartOf="@id/text_div"
+        app:layout_constraintStart_toEndOf="@id/text_open"
+        app:layout_constraintTop_toBottomOf="@id/text_result" />
+
+    <TextView
+        android:id="@+id/text_div"
+        style="@style/ActionButtonStyle"
+        android:text="@string/div"
+        app:layout_constraintBottom_toTopOf="@id/text_times"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_close"
+        app:layout_constraintTop_toBottomOf="@id/text_result" />
+
+    <TextView
+        android:id="@+id/text_seven"
+        style="@style/NumberButtonStyle"
+        android:text="@string/seven"
+        app:layout_constraintBottom_toTopOf="@id/text_four"
+        app:layout_constraintEnd_toStartOf="@id/text_eight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_clear" />
+
+    <TextView
+        android:id="@+id/text_eight"
+        style="@style/NumberButtonStyle"
+        android:text="@string/eight"
+        app:layout_constraintBottom_toTopOf="@id/text_five"
+        app:layout_constraintEnd_toStartOf="@id/text_nine"
+        app:layout_constraintStart_toEndOf="@id/text_seven"
+        app:layout_constraintTop_toBottomOf="@id/text_open" />
+
+    <TextView
+        android:id="@+id/text_nine"
+        style="@style/NumberButtonStyle"
+        android:text="@string/nine"
+        app:layout_constraintBottom_toTopOf="@id/text_six"
+        app:layout_constraintEnd_toStartOf="@id/text_times"
+        app:layout_constraintStart_toEndOf="@id/text_eight"
+        app:layout_constraintTop_toBottomOf="@id/text_close" />
+
+    <TextView
+        android:id="@+id/text_times"
+        style="@style/ActionButtonStyle"
+        android:text="@string/times"
+        app:layout_constraintBottom_toTopOf="@id/text_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_nine"
+        app:layout_constraintTop_toBottomOf="@id/text_div" />
+
+    <TextView
+        android:id="@+id/text_four"
+        style="@style/NumberButtonStyle"
+        android:text="@string/four"
+        app:layout_constraintBottom_toTopOf="@id/text_one"
+        app:layout_constraintEnd_toStartOf="@id/text_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_seven" />
+
+    <TextView
+        android:id="@+id/text_five"
+        style="@style/NumberButtonStyle"
+        android:text="@string/five"
+        app:layout_constraintBottom_toTopOf="@id/text_two"
+        app:layout_constraintEnd_toStartOf="@id/text_six"
+        app:layout_constraintStart_toEndOf="@id/text_four"
+        app:layout_constraintTop_toBottomOf="@id/text_eight" />
+
+    <TextView
+        android:id="@+id/text_six"
+        style="@style/NumberButtonStyle"
+        android:text="@string/six"
+        app:layout_constraintBottom_toTopOf="@id/text_three"
+        app:layout_constraintEnd_toStartOf="@id/text_minus"
+        app:layout_constraintStart_toEndOf="@id/text_five"
+        app:layout_constraintTop_toBottomOf="@id/text_nine" />
+
+    <TextView
+        android:id="@+id/text_minus"
+        style="@style/ActionButtonStyle"
+        android:text="@string/minus"
+        app:layout_constraintBottom_toTopOf="@id/text_plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_six"
+        app:layout_constraintTop_toBottomOf="@id/text_times" />
+
+    <TextView
+        android:id="@+id/text_one"
+        style="@style/NumberButtonStyle"
+        android:text="@string/one"
+        app:layout_constraintBottom_toTopOf="@id/text_dot"
+        app:layout_constraintEnd_toStartOf="@id/text_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_four" />
+
+    <TextView
+        android:id="@+id/text_two"
+        style="@style/NumberButtonStyle"
+        android:text="@string/two"
+        app:layout_constraintBottom_toTopOf="@id/text_zero"
+        app:layout_constraintEnd_toStartOf="@id/text_three"
+        app:layout_constraintStart_toEndOf="@id/text_one"
+        app:layout_constraintTop_toBottomOf="@id/text_five" />
+
+    <TextView
+        android:id="@+id/text_three"
+        style="@style/NumberButtonStyle"
+        android:text="@string/three"
+        app:layout_constraintBottom_toTopOf="@id/text_back"
+        app:layout_constraintEnd_toStartOf="@id/text_plus"
+        app:layout_constraintStart_toEndOf="@id/text_two"
+        app:layout_constraintTop_toBottomOf="@id/text_six" />
+
+    <TextView
+        android:id="@+id/text_plus"
+        style="@style/ActionButtonStyle"
+        android:text="@string/plus"
+        app:layout_constraintBottom_toTopOf="@id/text_equal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_three"
+        app:layout_constraintTop_toBottomOf="@id/text_minus" />
+
+    <TextView
+        android:id="@+id/text_dot"
+        style="@style/NumberButtonStyle"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_one" />
+
+    <TextView
+        android:id="@+id/text_zero"
+        style="@style/NumberButtonStyle"
+        android:text="@string/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_back"
+        app:layout_constraintStart_toEndOf="@id/text_dot"
+        app:layout_constraintTop_toBottomOf="@id/text_two" />
+
+    <ImageView
+        android:id="@+id/text_back"
+        style="@style/NumberButtonStyle"
+        android:scaleType="center"
+        android:src="@drawable/ic_backspace_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_equal"
+        app:layout_constraintStart_toEndOf="@id/text_zero"
+        app:layout_constraintTop_toBottomOf="@id/text_three" />
+
+    <TextView
+        android:id="@+id/text_equal"
+        style="@style/ActionButtonStyle"
+        android:text="@string/equal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_back"
+        app:layout_constraintTop_toBottomOf="@id/text_plus" />
+
+</android.support.constraint.ConstraintLayout>
